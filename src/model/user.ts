@@ -1,8 +1,8 @@
 import mongoose, { Schema } from "mongoose";
 
 const userSchema = new Schema({
-  firstName: { type: String, require: true },
-  DOB: { type: Date, require: true },
+  firstName: { type: String, required: true },
+  dob: { type: Date, required: true },
   address: { type: String },
   state: { type: String },
   zip: { type: String },
