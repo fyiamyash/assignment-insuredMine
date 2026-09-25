@@ -1,0 +1,31 @@
+{
+  "name": "assignment-insuredmine",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsc -b && node dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fyiamyash/assignment-insuredMine.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/fyiamyash/assignment-insuredMine/issues"
+  },
+  "homepage": "https://github.com/fyiamyash/assignment-insuredMine#readme",
+  "dependencies": {
+    "@types/express": "^5.0.6",
+    "@types/mongoose": "^5.11.96",
+    "express": "^5.2.1",
+    "mongoose": "^9.10.2"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.2",
+    "typescript": "^5.9.3"
+  }
+}
