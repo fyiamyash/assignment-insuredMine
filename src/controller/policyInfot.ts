@@ -2,11 +2,9 @@ import type { Request, Response } from "express";
 import { policyModel } from "../model/policy.js";
 import z from "zod";
 import { userModel } from "../model/user.js";
+import { IncomingBodyType } from "../zodValidation/zodtypes.js";
 
 export async function policyInfoController(req: Request, res: Response) {
-  const IncomingBodyType = z.object({
-    username: z.string().min(3),
-  });
   const safeBody = IncomingBodyType.safeParse(req.body);
   if (!safeBody.success) {
     res.status(404).json({ err: safeBody.error });

@@ -1,8 +1,10 @@
 import { Router } from "express";
-import { policyUploadRouter } from "./fileUploadRouter.js";
+import { UploadRouter } from "./fileUploadRouter.js";
 import { policyInfoRouter } from "./policyInfo.js";
+import { messageRouter } from "./scheduleMessage.js";
 
 export const appRouter = Router();
 
-appRouter.use(policyUploadRouter);
+appRouter.use(UploadRouter);
 appRouter.use(policyInfoRouter);
+appRouter.use(messageRouter);

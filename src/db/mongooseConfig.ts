@@ -6,7 +6,12 @@ export async function connectDb(threadName: string) {
     const dbUrl = envCustom.mongoUrl;
 
     mongoose.connection.on("connected", () => {
-      console.log("MongoDB connected for :", threadName, mongoose.connection.name);
+      console.log(
+        "MongoDB connected for thread name :",
+        threadName,
+        ", database :",
+        mongoose.connection.name,
+      );
     });
     await mongoose.connect(dbUrl!);
   } catch (err) {

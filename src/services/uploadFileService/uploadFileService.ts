@@ -1,7 +1,6 @@
 import { Worker } from "node:worker_threads";
-import path from "node:path";
 export async function uploadFileService(filepath: string) {
-  const workerPath = new URL("../../worker/worker.js", import.meta.url);
+  const workerPath = new URL("../../workerThread/worker.js", import.meta.url);
   const worker1 = new Worker(workerPath, {
     workerData: {
       filePath: filepath,

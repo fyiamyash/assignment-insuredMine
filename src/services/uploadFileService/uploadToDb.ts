@@ -3,9 +3,10 @@ import { AgentModel } from "../../model/agent.js";
 import { policyCategoryModel } from "../../model/lob.js";
 import { policyCarrierModel } from "../../model/policyCarrier.js";
 import { userModel } from "../../model/user.js";
-import type { rowData } from "./uploadTypes.js";
+
 import { policyModel } from "../../model/policy.js";
 import { userAccountModel } from "../../model/userAccount.js";
+import type { rowData } from "./uploadTypes.js";
 
 export async function uploadToDb(batch: rowData[]) {
   console.log("next batch started:", new Date());

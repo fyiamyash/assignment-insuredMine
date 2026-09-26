@@ -1,7 +1,8 @@
 import { workerData, parentPort } from "worker_threads";
-import { parseFile } from "./utils/parseFile.js";
-import { uploadToDb } from "./utils/uploadToDb.js";
+
+import { uploadToDb } from "../services/uploadFileService/uploadToDb.js";
 import { connectDb } from "../db/mongooseConfig.js";
+import { parseFile } from "../services/uploadFileService/parseFile.js";
 
 const { filePath } = workerData;
 console.log(filePath);

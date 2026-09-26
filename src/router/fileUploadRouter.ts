@@ -3,8 +3,9 @@ import multer from "multer";
 import { randomUUID } from "node:crypto";
 import path from "node:path";
 import { uploadFileController } from "../controller/uploadFile.js";
+import { asyncHandler } from "../utils/asyncHandler.js";
 
-export const policyUploadRouter = Router();
+export const UploadRouter = Router();
 
 const uploadDir = path.join(process.cwd(), "uploads");
 
@@ -21,4 +22,4 @@ const MulterMiddleware = multer({
   limits: { fileSize: 10 * 1024 * 1024 },
 });
 
-policyUploadRouter.post("/upload", MulterMiddleware.single("file"), uploadFileController);
+UploadRouter.post("/upload", MulterMiddleware.single("file"), asyncHandler(uploadFileController));
