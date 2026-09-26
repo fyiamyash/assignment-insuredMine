@@ -4,6 +4,18 @@ A backend service for managing policy information, users, CSV uploads, and sched
 
 The project currently contains the main API services in a single server. It supports querying policy information, getting aggregated user data, uploading CSV files, and scheduling messages.
 
+# Running the Project
+
+Before starting the backend, make sure the Redis service is running because BullMQ uses Redis for the message queue.
+
+1. Run the Docker Compose file first:
+
+docker compose up -d
+
+start backend : npm run dev
+
+start monitor(diff terminal): npm run monitor
+
 # Architecture
 
 <img width="1030" height="592" alt="Screenshot 2026-09-26 at 11 04 31 PM" src="https://github.com/user-attachments/assets/201f8ddd-c994-4506-9e22-c383b942d0cd" />
