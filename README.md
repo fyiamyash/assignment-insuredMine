@@ -6,6 +6,8 @@ The project currently contains the main API services in a single server. It supp
 
 # Architecture
 
+<img width="1030" height="592" alt="Screenshot 2026-09-26 at 11 04 31 PM" src="https://github.com/user-attachments/assets/201f8ddd-c994-4506-9e22-c383b942d0cd" />
+
 # APIs
 
 1. Get Policy Information
