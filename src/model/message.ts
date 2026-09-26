@@ -3,6 +3,7 @@ import { required } from "zod/mini";
 
 const messageSchema = new Schema({
   message: { type: String, required: true },
+  scheduledAt: { type: Date },
   recievedAt: { type: Date },
 });
 
