@@ -10,7 +10,7 @@ async function run() {
   try {
     console.log(`Starting import: ${filePath}`);
     await connectDb("worker");
-    await parseFile(filePath, uploadToDb);
+    await parseFile(filePath);
     console.log(`Import completed: ${filePath}`);
 
     parentPort?.postMessage({

@@ -4,6 +4,12 @@ import fs from "fs/promises";
 import { appRouter } from "./router/index.js";
 import "./services/messageService/cron/scheduledMessages.js";
 import "./services/messageService/sendMessageWorker.js";
+import "./model/agent.js";
+import "./model/lob.js";
+import "./model/policyCarrier.js";
+import "./model/user.js";
+import "./model/policy.js";
+import "./model/userAccount.js";
 const app = express();
 
 connectDb("Main");

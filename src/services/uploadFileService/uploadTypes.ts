@@ -1,3 +1,5 @@
+import type { Types } from "mongoose";
+
 export type rowData = {
   agent: string;
   userType: string;
@@ -27,4 +29,10 @@ export type rowData = {
   "Applicant ID": string;
   agency_id: string;
   "hasActive ClientPolicy": string;
+};
+
+export type createCacheTypes = {
+  agent: Map<string, Types.ObjectId>;
+  category: Map<string, Types.ObjectId>;
+  carrier: Map<string, Types.ObjectId>;
 };
