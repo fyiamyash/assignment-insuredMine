@@ -5,7 +5,7 @@ import { appRouter } from "./router/index.js";
 
 const app = express();
 
-await connectDb("Main");
+connectDb("Main");
 app.use(express.json());
 app.use(appRouter);
 
